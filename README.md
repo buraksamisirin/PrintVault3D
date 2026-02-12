@@ -1,6 +1,7 @@
 # STLZ - 3D Printing Digital Asset Manager 🚀
 
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) ![WPF](https://img.shields.io/badge/WPF-Windows-0078D7?style=for-the-badge&logo=windows&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-07405e?style=for-the-badge&logo=sqlite&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+[![GitHub Release](https://img.shields.io/github/v/release/buraksamisirin/PrintVault3D?style=for-the-badge&label=Download&color=success)](https://github.com/buraksamisirin/PrintVault3D/releases/latest)
 
 **STLZ** is a high-performance, locally-hosted **Digital Asset Manager (DAM)** designed specifically for 3D printing enthusiasts. Built with **Modern WPF (.NET 8)**, it organizes STL, 3MF, and G-CODE files, provides automatic thumbnail generation, and performs advanced G-code analysis to calculate printing costs and time.
 
