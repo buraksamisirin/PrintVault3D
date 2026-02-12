@@ -33,6 +33,7 @@
 
   <ItemGroup>
   <None Include="PythonScripts\**\*" CopyToOutputDirectory="PreserveNewest" LinkBase="PythonScripts" />
+  <None Include="Python\**\*" CopyToOutputDirectory="PreserveNewest" LinkBase="Python" />
   </ItemGroup>
 
   <ItemGroup>

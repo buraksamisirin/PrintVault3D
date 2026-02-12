@@ -647,13 +647,15 @@ public class PythonBridgeService : IPythonBridgeService
         var programFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
         var userName = Environment.UserName;
         
+        var appDir = AppDomain.CurrentDomain.BaseDirectory;
+
         var commonPaths = new[]
         {
             // Try explicit user paths first
             // PRIORITIZE LOCAL EMBEDDED PYTHON
             // Look for a 'Python' folder in the application directory
-            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Python", "python.exe"),
-            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "python", "python.exe"),
+            Path.Combine(appDir, "Python", "python.exe"),
+            Path.Combine(appDir, "python", "python.exe"),
             
             $@"C:\Users\{userName}\AppData\Local\Programs\Python\Python313\python.exe",
             $@"C:\Users\{userName}\AppData\Local\Programs\Python\Python312\python.exe",

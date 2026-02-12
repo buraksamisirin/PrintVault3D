@@ -101,11 +101,13 @@ This project demonstrates the integration of modern desktop application patterns
 - Windows 10 or 11 (64-bit)
 - .NET 8 Runtime (Included in release)
 - **Python 3.10+** (Required for thumbnail generation & G-code analysis)
-  - _Note: If Python is not installed, the app will work but thumbnails won't be generated._
+  - **Option 1 (Recommended):** Use the **Portable version**, which includes its own Python environment. No setup needed!
+  - **Option 2:** Install Python 3.10+ manually and run `pip install numpy-stl matplotlib`.
 
 ### Running the App
 
 1. Download the latest release from the **Releases** section.
+   - Choose **STLZ_v1.0.0_Portable.zip** for the all-in-one experience.
 2. Extract the ZIP file.
 3. Run `STLZ.exe`.
 
