@@ -1,0 +1,87 @@
+﻿<Window x:Class="PrintVault3D.Views.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="STLZ Loading" 
+        Height="350" Width="300"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False">
+    
+    <Border CornerRadius="20" Background="#161B22">
+        <Border.Effect>
+            <DropShadowEffect Color="Black" BlurRadius="20" ShadowDepth="0" Opacity="0.5"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Logo Area -->
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <!-- STLZ Logo Image -->
+                <Image Source="/Assets/logo.png"
+                       Width="80" Height="80"
+                       Margin="0,0,0,16">
+                    <Image.Effect>
+                        <DropShadowEffect Color="{StaticResource AccentCyan}" BlurRadius="25" ShadowDepth="0" Opacity="0.6"/>
+                    </Image.Effect>
+                </Image>
+                
+                <TextBlock Text="STLZ" 
+                           Foreground="White"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+                           
+                <TextBlock Text="Zero-Click Asset Manager" 
+                           Foreground="{StaticResource TextSecondaryBrush}"
+                           FontSize="12"
+                           HorizontalAlignment="Center"
+                           Margin="0,4,0,0"/>
+            </StackPanel>
+
+            <!-- Loader -->
+            <StackPanel Grid.Row="1" Margin="24">
+                <ProgressBar IsIndeterminate="True" 
+                             Height="4" 
+                             Background="{StaticResource BackgroundDarkBrush}"
+                             BorderThickness="0"
+                             Foreground="{StaticResource AccentCyanBrush}">
+                    <ProgressBar.Resources>
+                        <Style TargetType="ProgressBar">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ProgressBar">
+                                        <Grid x:Name="TemplateRoot">
+                                            <Border Background="{TemplateBinding Background}" CornerRadius="2"/>
+                                            <Border x:Name="PART_Track" CornerRadius="2"/>
+                                            <Border x:Name="PART_Indicator" Background="{TemplateBinding Foreground}" CornerRadius="2" HorizontalAlignment="Left"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ProgressBar.Resources>
+                </ProgressBar>
+            </StackPanel>
+
+            <!-- Status Text -->
+            <TextBlock x:Name="StatusText"
+                       Grid.Row="2"
+                       Text="Initializing..."
+                       Foreground="{StaticResource TextMutedBrush}"
+                       FontSize="11"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,24"/>
+        </Grid>
+    </Border>
+</Window>
+

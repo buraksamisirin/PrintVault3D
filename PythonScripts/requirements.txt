@@ -1,0 +1,8 @@
+# PrintVault 3D - Python Dependencies
+# Install: pip install -r requirements.txt
+
+numpy-stl>=3.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+Pillow>=10.0.0
+
