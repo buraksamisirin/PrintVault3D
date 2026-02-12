@@ -96,8 +96,9 @@ This project demonstrates the integration of modern desktop application patterns
 ### Requirements
 
 - Windows 10 or 11 (64-bit)
-- .NET 8 Runtime
-- Python 3.10+ (for thumbnail generation)
+- .NET 8 Runtime (Included in release)
+- **Python 3.10+** (Required for thumbnail generation & G-code analysis)
+  - _Note: If Python is not installed, the app will work but thumbnails won't be generated._
 
 ### Running the App
 
